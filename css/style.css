@@ -1,0 +1,194 @@
+
+body {
+	font-family: 'Nunito', sans-serif;
+	background: #f7f7f7;
+}
+
+/*TITLE*/
+
+#intro {
+	margin: auto;
+	width: 60%;
+	padding: 5px;
+	text-align: center;
+	
+}
+
+#title {
+	font-size: 1.5em;	
+}
+
+#subtitle {
+	font-size: 1.25rem;
+	color: grey;
+}
+
+
+/*ALL EMPLOYEES*/
+
+.employees{
+	display: block;
+	width: 90%;
+	margin-left: auto;
+	
+}
+
+/*EACH EMPLOYEE*/
+
+.employee{
+	border: 2px solid lightgrey;
+	background: white;
+	list-style-type: none;
+	border-radius: 5px;
+	padding: 15px;
+	margin: 20px 20px;
+	display: inline-block;
+	width: 25%;
+}
+
+.employee:hover{
+	border: 2px solid darkgrey;
+	
+
+}
+
+.picture img{
+	border-radius: 50%;
+	float: left;
+	position: relative;
+	top: 50%;
+	transform:  translateY(30%);
+
+}
+
+.data{
+	margin-left: 85px;
+}
+
+.name{
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+
+.email{
+	font-style: italic;
+	color: grey;
+	font-size: 0.75rem;
+}
+.location{
+	font-size: 0.8rem;
+}
+
+
+/* The Modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 30px;
+    border: 2px solid #888;
+    width: 25%; 
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+.picture-modal img{
+	border-radius: 50%;
+	margin: auto;
+	display: block;
+	margin-bottom: 30px;
+	transform: translateX(8px);
+}
+
+.data-modal{
+	display: block;
+	text-align: center;
+	border-bottom: 1px solid lightgrey;
+}
+
+.name-modal{
+	font-weight: bold;
+}
+
+.email-modal{
+	font-style: italic;
+	color: grey;
+	font-size: 0.9rem;
+}
+
+.location-modal{
+	color: grey;
+}
+
+.data-modal-2{
+	padding-top: 15px;
+	display: block;
+	text-align: center;
+	color: grey;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+
+@media only screen and (max-width: 1150px) {
+	.employee{
+	width: 40%;
+	}
+}
+
+
+@media only screen and (max-width: 1300px) {
+	.employees{
+	margin: auto;
+	
+}
+
+@media only screen and (max-width: 900px) {
+	.employee{
+	width: 85%;
+
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	
+	.employee{
+
+		margin-left: 5px;
+		padding-left: 5px;
+	}
+	.employees{
+
+		margin-left: 5%;
+		padding-left: 5px;
+	}
+
+}
