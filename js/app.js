@@ -1,7 +1,7 @@
 
 //request the data
     $.ajax({
-        url: 'https://randomuser.me/api/?results=12',
+        url: 'https://randomuser.me/api/?results=12&nat=us',
         dataType: 'json',
         success: function (data) {
           
