@@ -1,12 +1,13 @@
 
-
-
+//request the data
     $.ajax({
         url: 'https://randomuser.me/api/?results=12',
         dataType: 'json',
         success: function (data) {
           
             var employeesHTML = '<ul class="employees">';
+
+            //loop for each employee
             $.each(data.results, function (index, employee) {
             employeesHTML += `<div class="employee">
                 <li class="picture">
@@ -21,7 +22,10 @@
                 </div></div>`	
             });
             employeesHTML += '</ul>';
+            //insert the html
             $('#employeeintro').html(employeesHTML);
+
+            //creating variables for the modal.
 
             const $modal = $('#myModal');
             const $btnDiv = $('.employee');
@@ -31,8 +35,9 @@
 
             $($btnDiv).click(function(){
 
-                console.log( $($btnDiv).index(this) );
-                let selectIndex = $($btnDiv).index(this);
+            let selectIndex = $($btnDiv).index(this);
+
+            //creating the HTML for the modal
 
              let modalContentHTML = `<div class="employee-modal">
                  <li class="picture-modal">
@@ -55,12 +60,18 @@
                  </div></div></div></div>
                  `;
 
+                 //inserting the html
+
                 $('.interior-modal').html(modalContentHTML);            
             });
+
+            //show the modal
 
             $($btnDiv).on('click', function(){
                 $($modal).show();
             });
+
+            // hide the modal
 
             $($spanClose).on('click', function(){
                 $($modal).hide();
